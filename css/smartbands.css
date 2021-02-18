@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+body{
+    background: rgb(255, 255, 255);
+}
+header{
+    position: fixed;
+    background: white;
+    width: 90%;
+    padding: 0 5%;
+    height: 14vh;
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.37);
+}
+
+header .indice{
+    float: left;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav{
+    float: left;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+}
+header nav h2{
+    margin-left:30px;
+    transition: .1s;
+}
+header nav h2:hover{
+    color: rgb(53, 90, 190);
+    transition: .1s;
+}
+
+header .acciones{
+    width: calc(30% -90px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .acciones .barrabusqueda{
+    outline: none;
+    height: 40%;
+    float: right;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.082);
+    border: 1px solid rgba(81, 92, 235, 0.74);
+}
+header .acciones .barrabusqueda:focus{
+    border: 1px solid rgb(53, 90, 190);
+}
+header .acciones .botones{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .acciones .botones button{
+    height: 40%;
+    padding: 7px 20px;
+    background: none;
+    border: none;
+    font-size: medium;
+    font-weight: bolder;
+    transition: .3s;
+
+
+}
+header .acciones .botones button:hover{
+    transform: scale(1.05);
+    transition: .1s;
+}
+header .acciones .botones .btn-ingresar:hover{
+    color: rgb(53, 90, 190);
+}
+header .acciones .botones .btn-registarse{
+    font-weight: bolder;
+    background: rgb(53, 90, 190);
+    color: white;
+    border-radius: 20px;
+
+}
+.contenido{
+    background: linear-gradient(rgb(53, 90, 190),rgb(80, 215, 248));
+    display: flex;
+    padding: 14vh 10% 0 10%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.contenido .carta{
+    padding: 20px 30px;
+    width: 200px;
+    flex: 200px;
+}
+.contenido .carta img{
+    width: 100%;
+}
+.contenido .carta .texto{
+    width: 100%;
+}
+.contenido .carta .texto p{
+    color: rgb(255, 255, 255);
+}
+.contenido .carta .texto p:nth-child(2){
+    color: rgb(0, 0, 0);
+}
+.contenido .carta .texto .titulo{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.contenido .carta .texto .descripcion{
+    font-size: 1.04rem;
+    padding: 0 10px;
+}
