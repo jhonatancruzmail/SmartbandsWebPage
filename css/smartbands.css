@@ -23,6 +23,7 @@ header .indice{
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: bajar 1s;
 }
 header nav{
     float: left;
@@ -32,6 +33,8 @@ header nav{
     justify-content: left;
     align-items: center;
     flex-direction: row;
+    animation: bajar 1s;
+    
 }
 header nav h2{
     margin-left:30px;
@@ -48,6 +51,7 @@ header .acciones{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    animation: bajar 1s;
 }
 header .acciones .barrabusqueda{
     outline: none;
@@ -61,6 +65,7 @@ header .acciones .barrabusqueda{
 }
 header .acciones .barrabusqueda:focus{
     border: 1px solid rgb(53, 90, 190);
+    animation: pulso 1s;
 }
 header .acciones .botones{
     height: 100%;
@@ -74,13 +79,15 @@ header .acciones .botones button{
     border: none;
     font-size: medium;
     font-weight: bolder;
-    transition: .3s;
+    border-radius: 20px;
+    /* transition: .3s; */
 
 
 }
 header .acciones .botones button:hover{
-    transform: scale(1.05);
-    transition: .1s;
+    /* transform: scale(1.05);
+    transition: .1s; */
+    animation: pulso 1.2s;
 }
 header .acciones .botones .btn-ingresar:hover{
     color: rgb(53, 90, 190);
@@ -89,7 +96,7 @@ header .acciones .botones .btn-registarse{
     font-weight: bolder;
     background: rgb(53, 90, 190);
     color: white;
-    border-radius: 20px;
+    
 
 }
 .contenido{
@@ -108,11 +115,14 @@ header .acciones .botones .btn-registarse{
 .contenido .carta img{
     width: 100%;
     transition: .3s;
+    animation: subir 1.2s;
+    
 }
 .contenido .carta img:hover{
     transform: scale(1.08);
-    transform: rotatez(10deg);
+    /* transform: rotatez(10deg); */
     transition: .3s;
+    /* animation: sacudida .9s infinite; */
 }
 .contenido .carta .texto{
     width: 100%;
@@ -135,11 +145,33 @@ header .acciones .botones .btn-registarse{
     padding: 0;
     text-align: center;
 }
-@keyframes syntax{
-    from{transform: rotateX(100deg);}
-    to {transform: rotateX(190deg);}
+@keyframes rebote{
+    50%{transform: rotatez(20deg);}
+    100% {transform: rotatez(10deg);}
 
 }
+@keyframes sacudida{
+    0%{transform: translatex(-10px);}
+    50%{transform: translateX(10px);}
+    100% {transform: translateX(-10px);}
+
+}
+@keyframes pulso{
+    0%{box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);}
+    100% {box-shadow: 0 0 0 18px rgba(0, 0, 0, 0);}
+
+}
+@keyframes subir{
+    0%{transform: translateY(30px);}
+    100% {transform: translateY(-0px);}
+
+}
+@keyframes bajar{
+    0%{transform: translateY(-10vh);}
+    100% {transform: translateY(0px);}
+
+}
+
 @media(max-width:1100px){
     header .acciones .barrabusqueda{
         display: none;
@@ -148,5 +180,10 @@ header .acciones .botones .btn-registarse{
 @media(max-width:1100px){
     .contenido .carta{
         flex: 200px;
+    }
+}
+@media(max-width:400px){
+    header nav h2 {
+        display: none;
     }
 }
